@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title%} Contact {% endblock%}
+
+{% block content %}
+	<div class="container container1">
+		<div class="row">
+			<div class="col s6">
+				<img class="responsive-img" src="https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+			</div>
+
+			<div class="col s6">
+				<div class="form-body">
+					<h4>Get in touch</h4>
+					<form class="form" method="POST">
+						{% csrf_token %}
+						{{ form.as_table }}
+						<input class="btn btn1 " type="submit" name="contact">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock%}
+
+
+	

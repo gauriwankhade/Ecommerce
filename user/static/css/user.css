@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf"); }
+
+.container1{
+	background: url('/static/images/regBack.jpg');
+	margin-top: 30px !important;
+
+}
+
+.form-body{
+	padding-top: 57px;
+	padding-right: 60px;
+	padding-left: 15px;
+	padding-bottom: 50px; 
+
+}
+
+h3{
+	font-size: 35px;
+	font-family: "ElMessiri-SemiBold";
+	text-align: center;
+	margin-bottom: 27px;
+	color: #ff9a9c; 
+}
+
+
+.btn{
+	background: #ff9a9c !important; 
+	font-weight: 700;
+	width: 100%;
+}
+
+a{
+ color: #ff9a9c; }
+
+.box-element{
+ 	box-shadow: hsl(0,0%,80%) 0 0 16px;
+ 	background-color: #fff;
+ 	border-radius: 24px;
+ 	padding: 10px;
+
+ }
+
+.btn1{
+  background: #ff9a9c;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat-SemiBold";
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0); 
+ 
+}
+
+
+
+
+

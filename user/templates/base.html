@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--fontawesome icons-->
+      <script src="https://kit.fontawesome.com/6c22af9ae8.js" crossorigin="anonymous"></script>
+      <!--Let browser know website is optimized for mobile-->
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+      <!-- Prepare django to load static files -->
+      {% load static %}
+      <!-- add css file-->
+      {% block css%}{% endblock %}
+      
+      <title>{% block title%} {% endblock %}</title> 
+</head>
+
+<body>
+
+      <!--nav-->
+      <div class="navbar-fixed">
+        <nav class="black">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">Anticville</a>
+              <a href="register" data-target="mobile-nav" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'products' %}">Store</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li><a href="{% url 'logout_url' %}">Sign Out</a>
+                </li>
+                <li>
+                  <a href="{% url 'cart' %}">
+                    <i class="fa fa-shopping-cart"></i>
+                  </a> 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-nav">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'products' %}">Store</a>
+        </li>
+        <li>
+          <a href="{% url 'contact' %}">Contact</a>
+        </li>
+        <li><a href="{% url 'logout_url' %}">Sign Out</a>
+        </li>
+        <li>
+          <a href="{% url 'cart' %}">
+            <i class="fa fa-shopping-cart"><span style="margin-left: 10px;">Cart</span></i>
+          </a> 
+        </li>
+      </ul>
+      <!--enter your content here-->
+    
+            {% block content%}
+            {% endblock%}
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+      <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+
+     
+
+      <script>
+        //sidenav
+        var elem1 = document.querySelector('.sidenav');
+        var instance1 = new M.Sidenav(elem1);
+
+
+        var elem2 = document.querySelector('.tabs');
+        var instance2 = new M.Tabs(elem2);
+
+        function myFunction() {
+          var url = "{% url 'login_url' %}"; 
+ 
+          window.open(url); 
+      } 
+
+
+      </script>
+
+</body>
+</html>
+
+
+

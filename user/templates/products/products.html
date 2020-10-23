@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--fontawesome icons-->
+      <script src="https://kit.fontawesome.com/6c22af9ae8.js" crossorigin="anonymous"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      {% load static %} <!-- Prepare django to load static files -->
+      <!-- add css file-->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+      <title>Products</title>
+    </head>
+<body>
+
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="{% url 'profile_url' %}">Profile</a></li>
+        <li><a href="{% url 'register_url'%}">Register</a></li>
+        <li><a href="{% url 'logout_url' %}">Sign Out</a></li>
+      </ul>
+    <!-- navbar -->
+      <div class="navbar-fixed">
+        <nav class="black">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="." class="brand-logo">Anticville</a>
+              <a href="." data-target="mobile-nav" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'products' %}">Store</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact'%}">Contact</a>
+                </li>
+                <li><a class="dropdown-trigger"  data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+                 <li>
+                  <a href="{% url 'cart' %}">
+                    <i class="fa fa-shopping-cart"></i>
+                  </a>   
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-nav">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'profile_url' %}">Profile</a>
+        </li>
+        <li>
+          <a href="{% url 'products' %}">Store</a>
+        </li>
+        <li>
+          <a href="{% url 'cart'%}">Cart</a>
+        </li>
+        <li>
+          <a href="{% url 'register_url' %}">Register</a>
+        </li>
+        <li>
+          <a href="{% url 'logout_url'%}">Sign Out</a>
+        </li>
+      </ul>
+
+    
+    <!--All products-->
+    <section>
+      <div style="margin-top: 50px;" class="container">
+        <div class="row">
+          {% for product in products %}
+          <div  style="margin-bottom: 10px;" class="col s12 m4">
+            <div class="box-element">
+              <img style="object-fit: cover;" class="thumbnail" src="{{ product.imageURL }}">    
+              <div class=" product">
+                <h6><a class="black-text" href="{% url 'product_detail' pk=product.id %}"><strong>{{product.name}}</strong></a> </h6>
+                <hr>
+                <form style="display: inline-block;" method="POST">
+                  {% csrf_token %}
+                  <input style="display: none;" type="text" name="product_id" value="{{product.id}}">
+                  <button type="submit" class="btn btn-small">Add</button>
+                </form>
+                <!-- <a class="btn btn-small #78909c blue-grey lighten-1" href="#">View</a> -->
+                <h6 style="display: inline;float: right;">${{product.price|floatformat:2}}</h6>
+              </div> 
+            </div>
+          </div>
+          {% endfor %}
+        </div>        
+      </div>
+    </section>
+
+    
+
+  
+  
+    <!--JavaScript at end of body for optimized loading-->
+
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  
+    <script>
+    	//sidenav
+        var elem = document.querySelector('.sidenav');
+        var instance1 = new M.Sidenav(elem,{});
+      
+           
+       var elem4 = document.querySelector('.dropdown-trigger');
+       var instance4 = new M.Dropdown(elem4,{});
+
+        
+    </script>
+        
+</body>
+</html>
+
+
+
+

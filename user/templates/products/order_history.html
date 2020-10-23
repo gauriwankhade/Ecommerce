@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+{% endblock%}
+
+
+{% block title%} Order History {% endblock%}
+
+{% block content %}
+	<div class="container">
+		<div style="margin-top: 30px;" class="box-element">
+			<ul class="collection with-header">
+				<li class="collection-header"><h4>Order History</h4></li>
+				{% for order in orders %}
+			    <li style="padding: 20px;">
+			    	<div>
+			    		<h6>{{order.name}}</h6>
+			    		<h6>{{order.address}}</h6>
+			    		<h6>{{order.email}}</h6>
+			    		<h6>{{order.date_added}}</h6>
+			    	</div>
+			    </li>
+			    {% endfor %}
+			</ul>     	
+		</div>       	
+	</div>
+{% endblock %}

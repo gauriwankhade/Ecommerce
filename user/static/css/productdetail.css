@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf"); }
+
+
+
+body{
+	font-family: "ElMessiri-SemiBold";
+}
+
+
+
+.box-element{
+ 	box-shadow: hsl(0,0%,80%) 0 0 16px;
+ 	background-color: #fff;
+ 	border-radius: 4px;
+ 	padding: 10px;
+
+ }
+
+
+ .details{
+ 	margin: 10px 10px;
+ 	color: grey !important;
+ }
+
+
+ .btn1{
+  background: #ff9a9c;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat-SemiBold";
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0); 
+ 
+}
+
+.btn{
+	margin-top: 20px;
+	background: #ff9a9c !important; 
+	font-weight: 700;
+	width: 20%;
+}
+
+.thumbnail{
+	width: 70%;
+	height: 150px;
+    margin-right: 100px;
+}
+
+

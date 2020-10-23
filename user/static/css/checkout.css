@@ -1,0 +1,39 @@
+
+input:not([type]), input[type=text], input[type=password], 
+input[type=email], input[type=url], input[type=time], 
+input[type=date], input[type=datetime], input[type=datetime-local], 
+input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea 
+{
+	border-bottom: none !important;
+	border: 1px solid #ececec !important;
+	padding-left: 5px !important;
+	float: right !important;
+	border-radius: 5px !important;
+
+}
+
+
+hr{
+	opacity: 0.2 !important;
+}
+
+.box-element{
+ 	box-shadow: hsl(0,0%,80%) 0 0 16px;
+ 	background-color: #fff;
+ 	border-radius: 4px;
+ 	padding: 10px;
+
+ }
+
+.hidden{
+	display: none;
+}
+
+.cart-row{
+	display: flex;
+	align-items: flex-stretch;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ececec;
+}
+

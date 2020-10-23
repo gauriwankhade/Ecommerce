@@ -1,0 +1,26 @@
+.thumbnail{
+	width: 70%;
+	height: 150px;
+    margin-right: 100px;
+}
+
+body{
+	font-family: 'Roboto', sans-serif !important;
+}
+
+
+
+.box-element{
+ 	box-shadow: hsl(0,0%,80%) 0 0 16px;
+ 	background-color: #fff;
+ 	border-radius: 4px;
+ 	padding: 10px;
+
+ }
+
+
+ .acc{
+ 	font-family: 'Roboto', sans-serif !important;
+ 	font-size: 1.3rem;
+ 	margin-top: 40px;
+ }

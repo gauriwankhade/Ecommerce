@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf"); }
+
+
+.box-element{
+ 	box-shadow: hsl(0,0%,80%) 0 0 16px;
+ 	background-color: #fff;
+ 	padding: 10px;
+
+ }
+
+
+ input:not([type]), input[type=text], input[type=password], 
+input[type=email], input[type=url], input[type=time], 
+input[type=date], input[type=datetime], input[type=datetime-local], 
+input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea 
+{
+	border-bottom: none !important;
+	background: white !important;
+	border-radius: 5px !important;
+	padding: 5px  !important;
+	
+}
+
+.container1{
+	background: url('/static/images/regBack.jpg');
+	margin-top: 30px !important;
+	padding: 50px;
+	font-family: "ElMessiri-SemiBold";
+}
+
+
+.btn{
+	margin-top: 5px;
+	background: #ff9a9c !important; 
+	font-weight: 700;
+	width: 100%;
+}

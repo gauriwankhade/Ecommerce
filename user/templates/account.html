@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+
+<!--Import Google Font-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+{% endblock%}
+
+{% block title%} Accounts {% endblock%}
+
+{% block content %}
+	<div class="container">
+		<div class="acc">
+			<div class="row">
+			<div class="col s6">
+				<div class="box-element">
+					<table class="highlight">
+						<tr style="height: 100px;">
+							<td>First Name</td>
+							<td>{{person.first_name}}
+							</td>
+						</tr>
+						<tr style="height: 100px;">
+							<td>Last Name</td>
+							<td>{{person.last_name}}
+							</td>
+						</tr>
+						<tr style="height: 100px;">
+							<td>Date of Birth</td>
+							<td>{{person.date_of_birth}}
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="col s6">
+				<div class="box-element">
+					<h4 class="center">Edit Details</h4>
+					<form method="POST">
+						{% csrf_token %}
+						<input type="text" name="first_name">	
+						<input type="text" name="last_name">	
+						<input type="date" name="date_of_birth">
+					
+						<input style="margin-top: 30px;" class="btn btn-small" type="submit" name="edit-user" value="edit">
+					</form>
+				</div>
+			</div>
+		</div>	
+		</div>
+	</dir>
+
+{% endblock %}
+
+<td>{{person.last_name}}</td>

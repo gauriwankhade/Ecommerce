@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xvystw85yk+k89i9ru0kym6n84n8dzw1(dd#+u!o7mnm2_8jy+'
+SECRET_KEY = 'your secret key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'newDB',
-        'USER': 'root',
-        'PASSWORD': 'queen@5000',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
         'DATABASE_STORAGE_ENGINE' : "MyISAM / INNODB / ETC",
@@ -135,9 +135,6 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static") ]
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
 
-
-# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-# EMAIL_FILE_PATH = '/Users/lazylearner/Desktop/project/ecommerce/my_mails' # change this to a proper location
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 

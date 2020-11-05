@@ -133,7 +133,7 @@ def contactView(request):
         else:
             subject= "A Visitor's Comment"
         comment= name + " with the email, " + email + ", sent the following message:\n\n" + comment;
-        send_mail(subject, comment, 'anjalichavan888@gmail.com', [email])
+        send_mail(subject, comment, 'example@gmail.com', [email])
         context= {'form': form}
         return HttpResponse('success!!')
     else:

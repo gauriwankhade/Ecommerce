@@ -5,5 +5,5 @@ Objectiv:-To build basic e-commerce web application using Django and MySQL with 
 
 Backend:- Python(Django)
 Ui:- Materializecss
-DB used: MySQL
-external libraries used:- Pillow 
+DB: MySQL
+external libraries:- Pillow 
